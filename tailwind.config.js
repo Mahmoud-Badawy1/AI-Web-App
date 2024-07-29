@@ -6,6 +6,27 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        'bg': {
+          '0%,100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.2)' },
+        },
+        'run': {
+          '0%': {
+            transform: "translateY(-100%)",
+          },
+          '100%' : {
+            transform: "translateY(100%)",
+          },
+      },
+    },
+      animation: {
+        'bg': 'bg 50s linear infinite',
+        'run': 'run 3s linear infinite',
+      },
+      zIndex: {
+        '1000': '1000'
+      },
       colors: {
         color: {
           1: "#AC6AFF",
@@ -129,4 +150,5 @@ export default {
       });
     }),
   ],
+
 };
